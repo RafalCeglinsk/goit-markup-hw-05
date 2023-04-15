@@ -37,11 +37,13 @@
 							<div>
 								<ul class="nav nav-item-flex">
 									<li>
-										<a
-											class="nav-item-agencja"
-											href="index.html"
-											>Agencja</a
-										>
+										<div class="is-active">
+											<a
+												class="nav-item-agencja"
+												href="index.html"
+												>Agencja</a
+											>
+										</div>
 									</li>
 									<li>
 										<a
@@ -95,7 +97,16 @@
 							BIZNESU</span
 						>
 					</h1>
-					<button class="order" type="button">Zamow Usluge</button>
+					<button data-modal-open class="order" type="button">
+						Zamow Usluge
+					</button>
+					<div class="backdrop is-hidden" data-modal>
+						<div class="modal">
+							<button class="btn-close" data-modal-close>
+								X
+							</button>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- Lorem List-->
@@ -190,24 +201,39 @@
 			<section class="sections container">
 				<h3 class="whatwedo">Czym się zajmujemy</h3>
 				<div class="what-we-do-img-flex">
-					<img
-						src="images/img.jpg"
-						width="370"
-						height="294"
-						alt="Programowanie"
-					/>
-					<img
-						src="images/img(1).jpg"
-						width="370"
-						height="294"
-						alt="Testowanie Aplikacji"
-					/>
-					<img
-						src="images/img(2).jpg"
-						width="370"
-						height="294"
-						alt="Upiekszanie aplikacji"
-					/>
+					<figure class="what-we-do-example">
+						<img
+							src="images/img.jpg"
+							width="370"
+							height="294"
+							alt="Programowanie"
+						/>
+						<figcaption class="example">
+							APLIKACJE KOMPUTEROWE
+						</figcaption>
+					</figure>
+					<figure class="what-we-do-example">
+						<img
+							src="images/img(1).jpg"
+							width="370"
+							height="294"
+							alt="Testowanie Aplikacji"
+						/>
+						<figcaption class="example">
+							APLIKACJE MOBILNE
+						</figcaption>
+					</figure>
+					<figure class="what-we-do-example">
+						<img
+							src="images/img(2).jpg"
+							width="370"
+							height="294"
+							alt="Upiekszanie aplikacji"
+						/>
+						<figcaption class="example">
+							ROZWIAZANIA GRAFICZNE
+						</figcaption>
+					</figure>
 				</div>
 			</section>
 			<!-- Our Team -->
@@ -635,5 +661,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>

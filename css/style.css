@@ -82,6 +82,19 @@ a {
 	letter-spacing: 0.02em;
 	margin-right: 46px;
 }
+.is-active {
+	position: relative;
+}
+.is-active::after {
+	content: "";
+	position: absolute;
+	background-color: var(--background-color-blue);
+	border-radius: 2px;
+	width: 53px;
+	height: 4px;
+	display: block;
+	margin-top: 27px;
+}
 .nav-item-portfolio:hover {
 	color: var(--hover-color-blue);
 }
@@ -224,6 +237,7 @@ ul {
 }
 
 .effective {
+	position: relative;
 	font-weight: 900;
 	font-size: 44px;
 	line-height: 1.36;
@@ -240,6 +254,46 @@ ul {
 		url("../images/effective-background.jpg");
 	padding: 200px;
 }
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1024px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+.is-hidden {
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+}
+.modal {
+	top: 50%;
+	left: 50%;
+	width: 528px;
+	height: 582px;
+	border-radius: 4px;
+	background-color: var(--background-color-white);
+	position: fixed;
+	z-index: 2;
+	transition-property: visibility, opacity, transform;
+	transition-duration: 2s;
+	transform: translateX(-50%) translateY(-50%) scale(1);
+	opacity: 1;
+	visibility: visible;
+	display: block;
+}
+.btn-close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50px;
+	right: 8px;
+	top: 8px;
+	fill: var(--background-color-white);
+}
 .whatwedo {
 	color: var(--text-color-black);
 	font-weight: 700;
@@ -248,6 +302,31 @@ ul {
 	text-align: center;
 	letter-spacing: 0.03em;
 	margin-bottom: 50px;
+}
+.what-we-do-example {
+	position: relative;
+}
+.what-we-do-example .example {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 370px;
+	height: 70px;
+	background-color: rgba(47, 48, 58, 0.8);
+	z-index: 1;
+}
+.example {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--text-color-white);
+	padding: 27px 90px;
 }
 .ourteam {
 	color: var(--text-color-black);
@@ -397,6 +476,40 @@ address {
 .project:hover {
 	cursor: pointer;
 	box-shadow: 0px 4px 4px 0px var(--box-shadow);
+}
+.project-card {
+	position: relative;
+	overflow: hidden;
+	width: 370x;
+	height: 294px;
+	z-index: 1;
+}
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: translatey(100%);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 1;
+}
+.project-card:hover .overlay {
+	transform: translateY(0);
+	background: rgba(33, 150, 243, 0.9);
+}
+
+.project-card:focus .overlay {
+	transform: translateY(0);
+	background: rgba(33, 150, 243, 0.9);
+}
+.project-description {
+	color: var(--text-color-white);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.1;
+	letter-spacing: 0.03em;
+	padding: 49px 45px 24px;
 }
 .antenna {
 	display: flex;
