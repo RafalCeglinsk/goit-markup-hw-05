@@ -82,8 +82,13 @@ a {
 	letter-spacing: 0.02em;
 	margin-right: 46px;
 }
-.is-active {
+.is-active .nav-item-agencja {
 	position: relative;
+	color: var(--text-color-blue);
+}
+.is-active .nav-item-portfolio {
+	position: relative;
+	color: var(--text-color-blue);
 }
 .is-active::after {
 	content: "";
@@ -259,7 +264,7 @@ ul {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 1024px;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 1;
 }
@@ -294,6 +299,13 @@ ul {
 	top: 8px;
 	fill: var(--background-color-white);
 }
+.btn-close:hover {
+	color: var(--border-color-blue);
+	border-color: var(--border-color-blue);
+	background-color: var(--background-color-white);
+	cursor: pointer;
+}
+
 .whatwedo {
 	color: var(--text-color-black);
 	font-weight: 700;
@@ -344,7 +356,6 @@ ul {
 	color: var(--text-color-black);
 	letter-spacing: 0.03em;
 	text-align: center;
-	padding-top: 30px;
 	padding-bottom: 10px;
 }
 .job {
@@ -438,6 +449,9 @@ address {
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
+.team-mate-fig {
+	padding: 30px 0px;
+}
 .footer-effect {
 	background-color: var(--background-color-black);
 	padding: 60px 0px;
@@ -480,14 +494,12 @@ address {
 .project-card {
 	position: relative;
 	overflow: hidden;
-	width: 370x;
-	height: 294px;
 	z-index: 1;
 }
 .overlay {
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 294px;
 	transform: translatey(100%);
 	transition: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -507,9 +519,9 @@ address {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
-	line-height: 1.1;
+	line-height: 1.55;
 	letter-spacing: 0.03em;
-	padding: 49px 45px 24px;
+	padding: 49px 24px;
 }
 .antenna {
 	display: flex;
@@ -557,7 +569,6 @@ address {
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
-	margin-bottom: 18px;
 	fill: var(--icon-color-grey);
 }
 .social-link {
