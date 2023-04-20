@@ -40,6 +40,7 @@ img {
 	--icon-color-grey: rgba(175, 177, 184, 1);
 	--contact-icon-color-grey: rgba(117, 117, 117, 1);
 	--customers-border-grey: rgba(175, 177, 184, 1);
+	--project-description-hover: rgba(33, 150, 243, 0.9);
 }
 a {
 	text-decoration: none;
@@ -64,15 +65,21 @@ a {
 }
 .menu-logo:hover {
 	color: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav {
 	list-style-type: none;
 }
 .nav-item-agencja:hover {
 	color: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-agencja:focus {
 	color: var(--focus-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-agencja {
 	color: var(--text-color-black);
@@ -102,9 +109,13 @@ a {
 }
 .nav-item-portfolio:hover {
 	color: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-portfolio:focus {
 	color: var(--focus-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-portfolio {
 	color: var(--text-color-black);
@@ -116,9 +127,13 @@ a {
 }
 .nav-item-kontakty:hover {
 	color: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-kontakty:focus {
 	color: var(--focus-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-kontakty {
 	color: var(--text-color-black);
@@ -143,11 +158,15 @@ a {
 .email:focus {
 	fill: var(--hover-color-blue);
 	color: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .phonenumber:hover,
 .phonenumber:focus {
 	fill: var(--hover-color-blue);
 	color: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .smartphone,
 .envelope-icon {
@@ -213,6 +232,8 @@ ul {
 	color: var(--text-color-white);
 	cursor: pointer;
 	box-shadow: 0px 4px 4px 0px var(--box-shadow);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button {
@@ -304,6 +325,8 @@ ul {
 	border-color: var(--border-color-blue);
 	background-color: var(--background-color-white);
 	cursor: pointer;
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .whatwedo {
@@ -476,6 +499,9 @@ address {
 	flex-wrap: wrap;
 	gap: 30px;
 }
+.project {
+	cursor: pointer;
+}
 .project-border {
 	color: var(--text-color-grey);
 	font-weight: 400;
@@ -487,33 +513,11 @@ address {
 	border-bottom: 1px solid var(--project-border-white);
 	border-left: 1px solid var(--project-border-white);
 }
-.project:hover {
-	cursor: pointer;
-	box-shadow: 0px 4px 4px 0px var(--box-shadow);
-}
 .project-card {
 	position: relative;
 	overflow: hidden;
-	z-index: 1;
-}
-.overlay {
-	position: absolute;
-	width: 100%;
-	height: 294px;
-	transform: translatey(100%);
-	transition: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: 1;
-}
-.project-card:hover .overlay {
-	transform: translateY(0);
-	background: rgba(33, 150, 243, 0.9);
 }
 
-.project-card:focus .overlay {
-	transform: translateY(0);
-	background: rgba(33, 150, 243, 0.9);
-}
 .project-description {
 	color: var(--text-color-white);
 	font-style: normal;
@@ -522,6 +526,18 @@ address {
 	line-height: 1.55;
 	letter-spacing: 0.03em;
 	padding: 49px 24px;
+	position: absolute;
+	transform: translateY(100%);
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.project:hover .project-description {
+	transform: translateY(0%);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	background-color: var(--project-description-hover);
 }
 .antenna {
 	display: flex;
@@ -584,6 +600,8 @@ address {
 	fill: white;
 	background-color: var(--background-color-blue);
 	border-radius: 50%;
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-customers {
 	color: var(--text-color-black);
@@ -615,6 +633,8 @@ address {
 .customer:focus {
 	border: 1px solid var(--hover-color-blue);
 	fill: var(--hover-color-blue);
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-socials-box {
 	display: inline-block;
@@ -655,4 +675,6 @@ address {
 	fill: white;
 	background-color: var(--background-color-blue);
 	border-radius: 50%;
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
